@@ -3,6 +3,7 @@ import os
 import logging
 import sys 
 import pandas as pd
+import re
 
 logger = logging.getLogger()
 
@@ -28,6 +29,29 @@ def set_logger() -> None:
     rootLogger.addHandler(stdout_handler)
 
 
+def trans_text_to_df(txt: str) -> pd.DataFrame:
+    ''' Take transaction text and convert it to a DataFrame '''
+    txt_lines = txt.split('\n')
+    l = []
+    for line in txt_lines:
+        if line:
+            trans_date_mtch = re.match('([0-9]{2}\/[0-9]{2})', line, flags=re.IGNORECASE)
+            if not trans_date_mtch:
+                continue
+            trans_date_grps = trans_date_mtch.groups()
+            trans_date = trans_date_grps[0]
+            amt_mtch = re.search('\s+(-*[0-9]*,*[0-9]*.[0-9]{2})\n*', line) 
+            amt_grps = amt_mtch.groups()
+            amt = amt_grps[-1]
+            desc = line.split(trans_date)[1].split(amt)[0].strip()
+            l.append({
+                'trans_date': trans_date,
+                'amt': amt,
+                'desc': desc
+            })
+    return pd.DataFrame(l)
+
+
 def get_pdf_data(pdf_dir:str=PDF_DIR) -> list[pd.DataFrame]:
     ''' Grab pdfs from `PDF_DIR` and extract transaction tables'''
     for filename in os.listdir(pdf_dir):
@@ -47,6 +71,8 @@ def get_pdf_data(pdf_dir:str=PDF_DIR) -> list[pd.DataFrame]:
                 # Sometimes the table goes into a new page, in which case "PAYMENTS AND OTHER CREDITS" is on the first
                 transaction_table_text += this_pg_transaction_tbl.split('PAYMENTS AND OTHER CREDITS')[0]
         logger.info(f"Isolated transaction table:\n{transaction_table_text}")
+        # Convert table text into DataFrame
+        transaction_df = trans_text_to_df(transaction_table_text)
         logger.info(f'## Done with {filename} ##')
         if not found_transaction_table:
             m = f"Couldnt find table in {filename}"
