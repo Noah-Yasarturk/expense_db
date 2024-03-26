@@ -29,21 +29,36 @@ def set_logger() -> None:
     rootLogger.addHandler(stdout_handler)
 
 
+
+def get_transaction_date(txt_line: str) -> str:
+    # TODO: add year & return as datetime
+    trans_date_mtch = re.match('([0-9]{2}\/[0-9]{2})', txt_line, flags=re.IGNORECASE)
+    if not trans_date_mtch:
+        return None
+    trans_date_grps = trans_date_mtch.groups()
+    trans_date = trans_date_grps[0]
+    return trans_date
+
+
+def get_transaction_amount(txt_line: str) -> float:
+    amt = None
+    amt_mtchs = re.findall('\s+(-*[0-9]*,*[0-9]*.[0-9]{2})\n*', txt_line) 
+    for m in amt_mtchs:
+        amt = m.replace(',','')
+    return float(amt)
+
+
 def trans_text_to_df(txt: str) -> pd.DataFrame:
     ''' Take transaction text and convert it to a DataFrame '''
     txt_lines = txt.split('\n')
     l = []
     for line in txt_lines:
         if line:
-            trans_date_mtch = re.match('([0-9]{2}\/[0-9]{2})', line, flags=re.IGNORECASE)
-            if not trans_date_mtch:
+            trans_date = get_transaction_date(line)
+            if not trans_date:
                 continue
-            trans_date_grps = trans_date_mtch.groups()
-            trans_date = trans_date_grps[0]
-            amt_mtch = re.search('\s+(-*[0-9]*,*[0-9]*.[0-9]{2})\n*', line) 
-            amt_grps = amt_mtch.groups()
-            amt = amt_grps[-1]
-            desc = line.split(trans_date)[1].split(amt)[0].strip()
+            amt = get_transaction_amount(line)
+            desc = line.split(trans_date)[1].split(str(amt))[0].strip()
             l.append({
                 'trans_date': trans_date,
                 'amt': amt,
