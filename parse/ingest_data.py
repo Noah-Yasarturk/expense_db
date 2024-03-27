@@ -4,6 +4,7 @@ import logging
 import sys 
 import pandas as pd
 import re
+from datetime import datetime
 
 logger = logging.getLogger()
 
@@ -67,6 +68,19 @@ def trans_text_to_df(txt: str) -> pd.DataFrame:
     return pd.DataFrame(l)
 
 
+def get_opening_closing_date(page: str) -> tuple[datetime, datetime]:
+    page_lines = page.split('\n')
+    m = 'Opening/Closing Date'
+    for ln in page_lines:
+        if m in ln: 
+            rng_txt = ln.split(m)[1].strip()
+            [open_dt_str, close_dt_str] = [t.strip() for t in rng_txt.split('-')]
+            opening_date = datetime.strptime(open_dt_str, '%m/%d/%y')
+            closing_date = datetime.strptime(close_dt_str, '%m/%d/%y')
+            return opening_date, closing_date
+    return None, None
+
+
 def get_pdf_data(pdf_dir:str=PDF_DIR) -> list[pd.DataFrame]:
     ''' Grab pdfs from `PDF_DIR` and extract transaction tables'''
     for filename in os.listdir(pdf_dir):
@@ -75,9 +89,14 @@ def get_pdf_data(pdf_dir:str=PDF_DIR) -> list[pd.DataFrame]:
         number_of_pages = len(reader.pages)
         found_transaction_table = False
         transaction_table_text = ''
+        open_dt, close_dt = None, None
         for pg_num in range(0, number_of_pages):
             page = reader.pages[pg_num]
             text = page.extract_text()
+            logger.info(text)
+            if not open_dt and not close_dt:
+                open_dt, close_dt = get_opening_closing_date(text)
+            # Get transaction table
             if CHASE_HEADERS[0] in text:
                 found_transaction_table = True 
                 # Transaction table is from "$ Amount" to 'Total fees charged'
@@ -88,6 +107,9 @@ def get_pdf_data(pdf_dir:str=PDF_DIR) -> list[pd.DataFrame]:
         logger.info(f"Isolated transaction table:\n{transaction_table_text}")
         # Convert table text into DataFrame
         transaction_df = trans_text_to_df(transaction_table_text)
+        transaction_df['Opening Date'] = open_dt
+        transaction_df['Closing Date'] = close_dt
+        logger.info(transaction_df)
         logger.info(f'## Done with {filename} ##')
         if not found_transaction_table:
             m = f"Couldnt find table in {filename}"

@@ -1,3 +1,5 @@
 pyenv
 *.log
 .vscode
+hidden_test_constants.py
+__pycache__

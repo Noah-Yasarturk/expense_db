@@ -3,9 +3,15 @@ import os
 import sys 
 sys.path.append(os.getcwd() + '/parse/')
 import ingest_data
-
+import hidden_test_constants
 
 class TestIngestData(unittest.TestCase):
+
+
+    def test_get_open_cls(self):
+        ''' We should be able to extract the opening & closing date from the statement page '''
+        open_dt, close_dt = ingest_data.get_opening_closing_date(hidden_test_constants.pg_smp_1)
+        self.assertTrue(open_dt.year == 2021 and close_dt.month == 1)
 
 
     def test_no_number_sign(self):
