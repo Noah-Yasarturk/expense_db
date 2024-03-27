@@ -50,7 +50,7 @@ def get_transaction_amount(txt_line: str) -> float:
 
 
 def trans_text_to_df(txt: str) -> pd.DataFrame:
-    ''' Take transaction text and convert it to a DataFrame '''
+    ''' Take transaction text and convert it to a DataFrame of transactions '''
     txt_lines = txt.split('\n')
     l = []
     for line in txt_lines:
@@ -60,11 +60,31 @@ def trans_text_to_df(txt: str) -> pd.DataFrame:
                 continue
             amt = get_transaction_amount(line)
             desc = line.split(trans_date)[1].split(str(amt))[0].strip()
-            l.append({
-                'Transaction Date': trans_date,
-                'Amount': amt,
-                'Description': desc
-            })
+            not_interest_line_item = 'PURCHASE INTEREST' not in desc
+            if not_interest_line_item and amt > 0:
+                l.append({
+                    'Transaction Date': trans_date,
+                    'Purchase Amount': amt,
+                    'Payment Amount': 0,
+                    'Interest Amount': 0,
+                    'Description': desc
+                })
+            elif not_interest_line_item and amt < 0:
+                l.append({
+                    'Transaction Date': trans_date,
+                    'Purchase Amount': 0,
+                    'Payment Amount': amt * -1,
+                    'Interest Amount': 0, 
+                    'Description': desc
+                })
+            else:
+                 l.append({
+                        'Transaction Date': trans_date,
+                        'Purchase Amount': 0,
+                        'Payment Amount': 0,
+                        'Interest Amount': amt, 
+                        'Description': desc
+                    })
     return pd.DataFrame(l)
 
 
@@ -110,7 +130,7 @@ def get_pdf_data(pdf_dir:str=PDF_DIR) -> list[pd.DataFrame]:
             if not open_dt and not close_dt:
                 open_dt, close_dt = get_opening_closing_date(text)
             if not purchases_this_period:
-                purchases_this_period = get_purchases_this_period(text)
+                purchases_this_period = round(get_purchases_this_period(text), 2)
             # Get transaction table
             if CHASE_HEADERS[0] in text:
                 found_transaction_table = True 
@@ -125,6 +145,15 @@ def get_pdf_data(pdf_dir:str=PDF_DIR) -> list[pd.DataFrame]:
         transaction_df['Opening Date'] = open_dt
         transaction_df['Closing Date'] = close_dt
         transaction_df['Purchases this Period'] = purchases_this_period
+        sum_of_parsed_transactions = round(transaction_df['Purchase Amount'].sum(), 2)
+        try:
+            assert purchases_this_period == sum_of_parsed_transactions
+        except AssertionError as e: 
+            logger.error(e)
+            err = f"Total purchases parsed did not equal sum of purchases for {filename}.\n"
+            err += f"Parsed purchase amount: {sum_of_parsed_transactions}\n"
+            err += f"Sum of parsed transactions amount: {purchases_this_period}"
+            raise Exception(err)
         logger.info(transaction_df)
         pdf_data.append(transaction_df)
         logger.info(f'## Done with {filename} ##')
@@ -132,8 +161,12 @@ def get_pdf_data(pdf_dir:str=PDF_DIR) -> list[pd.DataFrame]:
             m = f"Couldnt find table in {filename}"
             logger.error(m)
             raise Exception(m)
+    return pdf_data
 
 
 if __name__ == "__main__":
     set_logger()
-    get_pdf_data()
+    pdf_data = get_pdf_data()
+    pdf_data_concat_df = pd.concat(pdf_data)
+    # For now, just output as a csv 
+    pdf_data_concat_df.to_csv(os.getcwd() + '/all_transactions.csv')
