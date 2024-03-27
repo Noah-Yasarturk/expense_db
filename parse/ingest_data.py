@@ -61,9 +61,9 @@ def trans_text_to_df(txt: str) -> pd.DataFrame:
             amt = get_transaction_amount(line)
             desc = line.split(trans_date)[1].split(str(amt))[0].strip()
             l.append({
-                'trans_date': trans_date,
-                'amt': amt,
-                'desc': desc
+                'Transaction Date': trans_date,
+                'Amount': amt,
+                'Description': desc
             })
     return pd.DataFrame(l)
 
@@ -81,8 +81,20 @@ def get_opening_closing_date(page: str) -> tuple[datetime, datetime]:
     return None, None
 
 
+def get_purchases_this_period(page: str) -> float:
+    ''' Pull total purchase amount from text if it exists '''
+    page_lines = page.split('\n')
+    m = 'Purchases +$'
+    for ln in page_lines:
+        if m in ln:
+            purch_amt = float(ln.split(m)[1].replace(',',''))
+            return purch_amt
+    return None
+
+
 def get_pdf_data(pdf_dir:str=PDF_DIR) -> list[pd.DataFrame]:
     ''' Grab pdfs from `PDF_DIR` and extract transaction tables'''
+    pdf_data: list[pd.DataFrame] = []
     for filename in os.listdir(pdf_dir):
         logger.info(f'## Processing {filename} ##')
         reader = PdfReader(pdf_dir + '\\' + filename)
@@ -90,12 +102,15 @@ def get_pdf_data(pdf_dir:str=PDF_DIR) -> list[pd.DataFrame]:
         found_transaction_table = False
         transaction_table_text = ''
         open_dt, close_dt = None, None
+        purchases_this_period = None
         for pg_num in range(0, number_of_pages):
             page = reader.pages[pg_num]
             text = page.extract_text()
             logger.info(text)
             if not open_dt and not close_dt:
                 open_dt, close_dt = get_opening_closing_date(text)
+            if not purchases_this_period:
+                purchases_this_period = get_purchases_this_period(text)
             # Get transaction table
             if CHASE_HEADERS[0] in text:
                 found_transaction_table = True 
@@ -109,7 +124,9 @@ def get_pdf_data(pdf_dir:str=PDF_DIR) -> list[pd.DataFrame]:
         transaction_df = trans_text_to_df(transaction_table_text)
         transaction_df['Opening Date'] = open_dt
         transaction_df['Closing Date'] = close_dt
+        transaction_df['Purchases this Period'] = purchases_this_period
         logger.info(transaction_df)
+        pdf_data.append(transaction_df)
         logger.info(f'## Done with {filename} ##')
         if not found_transaction_table:
             m = f"Couldnt find table in {filename}"

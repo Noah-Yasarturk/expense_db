@@ -7,6 +7,11 @@ import hidden_test_constants
 
 class TestIngestData(unittest.TestCase):
 
+    def test_get_purchases_this_period(self):
+        ''' We should be able to extract the total purchases for a given period from the statement page '''
+        purch_amt = ingest_data.get_purchases_this_period(hidden_test_constants.pg_smp_1)
+        self.assertTrue(purch_amt == 2435.96, f"Failed to get proper purchase amount: {purch_amt}")
+
 
     def test_get_open_cls(self):
         ''' We should be able to extract the opening & closing date from the statement page '''
