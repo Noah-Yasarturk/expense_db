@@ -1,7 +1,7 @@
 import unittest
 import os 
 import sys 
-sys.path.append(os.getcwd() + '/parse/')
+sys.path.append(os.getcwd() + '/ingest/')
 import ingest_data
 import hidden_test_constants
 

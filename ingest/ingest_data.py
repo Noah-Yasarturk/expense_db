@@ -139,7 +139,6 @@ def get_pdf_data(pdf_dir:str=PDF_DIR) -> list[pd.DataFrame]:
                 this_pg_transaction_tbl = this_pg_transaction_tbl.split('Total fees charged')[0]
                 # Sometimes the table goes into a new page, in which case "PAYMENTS AND OTHER CREDITS" is on the first
                 transaction_table_text += this_pg_transaction_tbl.split('PAYMENTS AND OTHER CREDITS')[0]
-        logger.info(f"Isolated transaction table:\n{transaction_table_text}")
         # Convert table text into DataFrame
         transaction_df = trans_text_to_df(transaction_table_text)
         transaction_df['Opening Date'] = open_dt
