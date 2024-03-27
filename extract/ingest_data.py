@@ -1,3 +1,4 @@
+''' Grab Chase credit card transactions from my local folder and extract the needed data '''
 from pypdf import PdfReader
 import os 
 import logging
@@ -32,7 +33,7 @@ def set_logger() -> None:
 
 
 def get_transaction_date(txt_line: str) -> str:
-    # TODO: add year & return as datetime
+    ''' Pull date of the transaction from the line item '''
     trans_date_mtch = re.match('([0-9]{2}\/[0-9]{2})', txt_line, flags=re.IGNORECASE)
     if not trans_date_mtch:
         return None
@@ -42,6 +43,7 @@ def get_transaction_date(txt_line: str) -> str:
 
 
 def get_transaction_amount(txt_line: str) -> float:
+    '''Pull transaction amount from the line item '''
     amt = None
     amt_mtchs = re.findall('\s+(-*[0-9]*,*[0-9]*.[0-9]{2})\n*', txt_line) 
     for m in amt_mtchs:
@@ -89,6 +91,7 @@ def trans_text_to_df(txt: str) -> pd.DataFrame:
 
 
 def get_opening_closing_date(page: str) -> tuple[datetime, datetime]:
+    ''' If the page has the opening & closing date of the statement, extract it '''
     page_lines = page.split('\n')
     m = 'Opening/Closing Date'
     for ln in page_lines:
@@ -113,7 +116,7 @@ def get_purchases_this_period(page: str) -> float:
 
 
 def get_pdf_data(pdf_dir:str=PDF_DIR) -> list[pd.DataFrame]:
-    ''' Grab pdfs from `PDF_DIR` and extract transaction tables'''
+    ''' Grab all pdfs from `PDF_DIR` and extract transaction data '''
     pdf_data: list[pd.DataFrame] = []
     for filename in os.listdir(pdf_dir):
         logger.info(f'## Processing {filename} ##')
@@ -158,7 +161,6 @@ def get_pdf_data(pdf_dir:str=PDF_DIR) -> list[pd.DataFrame]:
         logger.info(f'## Done with {filename} ##')
         if not found_transaction_table:
             m = f"Couldnt find table in {filename}"
-            logger.error(m)
             raise Exception(m)
     return pdf_data
 
