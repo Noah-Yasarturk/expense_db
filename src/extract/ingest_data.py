@@ -1,35 +1,21 @@
 ''' Grab Chase credit card transactions from my local folder and extract the needed data '''
 from pypdf import PdfReader
 import os 
+import sys
 import logging
-import sys 
 import pandas as pd
 import re
 from datetime import datetime
+sys.path.append(os.getcwd())
+from src.utils import set_logger
 
 logger = logging.getLogger()
 
+LOG_PATH = os.getcwd() + "/ingest_data.log"
 PATH = r'C:\Users\NoahY\OneDrive\Documents\Finances\Banking\Chase Statements\Credit Card statements\2024.03.25'
 PDF_DIR = os.path.normpath(PATH)
 CHASE_HEADERS = ["Date of\nTransaction", "Merchant Name or Transaction Description","$ Amount"]
-
-
-def set_logger() -> None:
-    ''' Enable logging to file & console '''
-    LOG_PATH = os.getcwd() + "/ingest_data.log"
-    # Empty old run
-    with open(LOG_PATH, 'w') as lf:
-        lf.write('New run.')
-    log_fmt = logging.Formatter("%(asctime)s [%(threadName)-12.12s] [%(levelname)-5.5s]  %(message)s")
-    rootLogger = logging.getLogger()
-    file_handler = logging.FileHandler(LOG_PATH)
-    rootLogger.setLevel(logging.INFO)
-    file_handler.setFormatter(log_fmt)
-    rootLogger.addHandler(file_handler)
-    stdout_handler = logging.StreamHandler(sys.stdout)
-    stdout_handler.setFormatter(log_fmt)
-    rootLogger.addHandler(stdout_handler)
-
+ALL_TRANSACTIONS_OUTPUT_PATH = os.getcwd() + '/all_transactions.csv'
 
 
 def get_transaction_date(txt_line: str) -> str:
@@ -166,8 +152,9 @@ def get_pdf_data(pdf_dir:str=PDF_DIR) -> list[pd.DataFrame]:
 
 
 if __name__ == "__main__":
-    set_logger()
+    set_logger(LOG_PATH)
     pdf_data = get_pdf_data()
     pdf_data_concat_df = pd.concat(pdf_data)
     # For now, just output as a csv 
-    pdf_data_concat_df.to_csv(os.getcwd() + '/all_transactions.csv')
+    logger.info(f"Outputting all transactions as csv at {ALL_TRANSACTIONS_OUTPUT_PATH}")
+    pdf_data_concat_df.to_csv(ALL_TRANSACTIONS_OUTPUT_PATH)

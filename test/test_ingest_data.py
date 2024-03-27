@@ -1,7 +1,7 @@
 import unittest
 import os 
 import sys 
-sys.path.append(os.getcwd() + '/extract/')
+sys.path.append(os.getcwd() + '/src/extract/')
 import ingest_data
 import hidden_test_constants
 
