@@ -7,15 +7,15 @@ import pandas as pd
 import re
 from datetime import datetime
 sys.path.append(os.getcwd())
-from src.utils import set_logger
+from src.utils import set_logger, EXTRACT_FOLDER
 
 logger = logging.getLogger()
 
-LOG_PATH = os.getcwd() + "/ingest_data.log"
-PATH = r'C:\Users\NoahY\OneDrive\Documents\Finances\Banking\Chase Statements\Credit Card statements\2024.03.25'
-PDF_DIR = os.path.normpath(PATH)
+LOG_PATH = EXTRACT_FOLDER + "ingest_data.log"
+PDF_PATH = r'C:\Users\NoahY\OneDrive\Documents\Finances\Banking\Chase Statements\Credit Card statements\2024.03.25'
+PDF_DIR = os.path.normpath(PDF_PATH)
 CHASE_HEADERS = ["Date of\nTransaction", "Merchant Name or Transaction Description","$ Amount"]
-ALL_TRANSACTIONS_OUTPUT_PATH = os.getcwd() + '/all_transactions.csv'
+ALL_TRANSACTIONS_OUTPUT_PATH = EXTRACT_FOLDER+ 'all_transactions.csv'
 
 
 def get_transaction_date(txt_line: str) -> str:

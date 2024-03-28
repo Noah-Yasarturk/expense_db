@@ -1,5 +1,9 @@
 import logging
 import sys 
+import os
+
+EXTRACT_FOLDER = os.getcwd() + '/src/extract/'
+TRANSFORM_FOLDER = os.getcwd() + '/src/transform/'
 
 def set_logger(log_path: str) -> None:
     ''' Enable logging to file & console '''
