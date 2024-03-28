@@ -1,13 +1,15 @@
 {
     "Food Delivery": [
-        "UBER EATS"
+        "UBER EATS",
+        "UBER* EATS"
     ],
     "Fast Food": [
         "WENDYS",
         "POPEYES",
         "COOK OUT",
         "ZAXBY",
-        "MCDONALD'S"
+        "MCDONALD'S",
+        "CHICK-FIL-A"
     ],
     "Meal Kit": [
         "HOME CHEF"
@@ -23,7 +25,9 @@
         "TEXACO",
         "CHEVRON",
         "CITGO",
-        "QT"
+        "QT",
+        "AMOCO",
+        "MAPCO"
     ],
     "Tech Bill": [
         "MSBILL.INFO",
@@ -32,11 +36,13 @@
     ], 
     "Grocery": [
         "DOLLARSHAVECLUB",
-        "INSTACART"
+        "INSTACART",
+        "PUBLIX"
     ],
     "Auto Maintenance": [
         "ADVANCEAUTOPARTS",
-        "CALIBER COLLISION"
+        "CALIBER COLLISION", 
+        "PCA ATL 2"
     ],
     "Utilities": [
         "COWETA FAYETTE ELECTR",
@@ -49,9 +55,30 @@
         "BUC-EE'S",
         "AMZN.COM/BILL"
     ],
-    "Restaurant": [
-        "PEACH VALLEY CAFE",
+    "Coffee": [
         "TST* OLD FOURTH WARD",
-        "TST* DANCING GOATS COFFEE"
+        "TST* DANCING GOATS COFFEE",
+        "STARBUCKS"
+    ],
+    "Restaurant": [
+        "PEACH VALLEY CAFE"
+    ],
+    "Gaming": [
+        "PLAYSTATION"
+    ],
+    "Car Insurance": [
+        "GEICO"
+    ],
+    "Haircut": [
+        "INMAN PARLOR"
+    ],
+    "Rent": [
+        "THE PRATO AT MI"
+    ],
+    "Rideshare": [
+        "UBER TRIP"
+    ],
+    "Shipping Service": [
+        "FEDEX"
     ]
 }
