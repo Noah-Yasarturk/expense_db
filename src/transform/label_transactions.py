@@ -30,7 +30,7 @@ def categorize_transactions(cat_map: dict, trans_df: pd.DataFrame) -> pd.DataFra
                             d['Category'] = category
                             break 
                 if d['Category'] is None:
-                    raise Exception(f"Transaction for period {dt} uncategorized: {row['Description']} for {row['Purchase Amount']}")
+                    raise Exception(f"Transaction for period {dt} uncategorized: {row['Description'].upper()} for {row['Purchase Amount']}")
             trans_cats_l.append(d)
     trans_cats_df = pd.DataFrame(trans_cats_l)
     return trans_cats_df

@@ -1,7 +1,8 @@
 {
     "Food Delivery": [
         "UBER EATS",
-        "UBER* EATS"
+        "UBER* EATS",
+        "DOORDASH"
     ],
     "Fast Food": [
         "WENDYS",
@@ -11,7 +12,8 @@
         "MCDONALD'S",
         "CHICK-FIL-A",
         "DAIRY QUEEN",
-        "SMOOTHIE KING"
+        "SMOOTHIE KING",
+        "JIMMY JOHNS"
     ],
     "Meal Kit": [
         "HOME CHEF"
@@ -22,7 +24,9 @@
         "DISNEY MOBILE",
         "NETFLIX",
         "YOUTUBE VIDEOS",
-        "CRUNCHYROLL"
+        "CRUNCHYROLL",
+        "DISNEYPLUS",
+        "HULU.COM"
     ],
     "Gas": [
         "EXXONMOBIL",
@@ -45,13 +49,18 @@
         "INSTACART",
         "PUBLIX",
         "WALGREENS",
-        "WAL-MART"
+        "WAL-MART",
+        "KROGER",
+        "LOWES",
+        "INGLES",
+        "WHOLEFDS"
     ],
     "Auto Maintenance": [
         "ADVANCEAUTOPARTS",
         "CALIBER COLLISION", 
-        "PCA ATL 2",
-        "DMV"
+        "DMV",
+        "GREASE MONKEY",
+        "ADVANCE AUTO PARTS"
     ],
     "Utilities": [
         "COWETA FAYETTE ELECTR",
@@ -66,12 +75,17 @@
         "ETSY.COM",
         "DISPLATE",
         "MACYS",
-        "VANS"
+        "VANS",
+        "BEST BUY",
+        "BED BATH & BEYOND",
+        "CHAMPS",
+        "VIRGINIA HIGHLAND BOOKS"
     ],
     "Coffee": [
         "TST* OLD FOURTH WARD",
         "TST* DANCING GOATS COFFEE",
-        "STARBUCKS"
+        "STARBUCKS",
+        "BOULDER CREEK COFFEE"
     ],
     "Restaurant": [
         "PEACH VALLEY CAFE",
@@ -80,7 +94,23 @@
         "CARNICERIA",
         "SWEET HUT",
         "LEE`S BAKERY",
-        "BURGER/HOP'S"
+        "BURGER/HOP'S",
+        "GENERAL MUIR",
+        "HATTIE B'S",
+        "EL SUPER PAN",
+        "TACO MAC",
+        "VICTORY SANDWICH BAR",
+        "VARSITY NORTH AVENUE",
+        "26 THAI",
+        "KURA REVOLVING SUSHI",
+        "TJ'S SANDWICHES",
+        "GWCC APPETIZE",
+        "JENI'S SPLENDID ICE",
+        "BROOKLYN BAGELS",
+        "GRINDHOUSE KILLER BURG",
+        "SEASONS 52",
+        "CLAYTON CAFE",
+        "CHILI'S"
     ],
     "Gaming": [
         "PLAYSTATION"
@@ -95,10 +125,13 @@
         "THE PRATO AT MI"
     ],
     "Rideshare": [
-        "UBER TRIP"
+        "UBER TRIP",
+        "UBER *PASS",
+        "UBER PASS"
     ],
     "Shipping Service": [
-        "FEDEX"
+        "FEDEX",
+        "USPS"
     ],
     "Flowers": [
         "LEAF N PETAL"
@@ -108,7 +141,17 @@
         "THREETAVERNSIMAGINARIUM",
         "LADYBIRD",
         "GREENS PACKAGE STORE",
-        "CITY WINERY"
+        "CITY WINERY",
+        "JOYSTICK GAMEBAR",
+        "SISTER LOUISA",
+        "DUNGEONS & DAIQUIRIS",
+        "C&P STOP & SHOP",
+        "ORPHEUS BREWING",
+        "REVERY - VR BAR",
+        "GEORGIA BEER GARDEN",
+        "LITTLE TROUBLE",
+        "BOOKHOUSE PUB",
+        "BANTAM PUB"
     ], 
     "Nicotine": [
         "INHALE SMOKE & VAPE"
@@ -117,7 +160,7 @@
         "TURBOTAX",
         "FRESHBOOKS"
     ],
-    "Gifts": [
+    "Lawn Service": [
         "LAWNSTARTER"
     ],
     "Furniture": [
@@ -125,5 +168,21 @@
     ],
     "Concerts": [
         "EB R.A.P.FERREIRA"
+    ],
+    "Dating App": [
+        "BUMBLE"
+    ],
+    "Parking": [
+        "EXECUTIVE PARKING",
+        "PARKINGCOM",
+        "PCA ATL 2",
+        "PCA ATL 3A",
+        "NATIONAL PARKING",
+        "LAZ PARKING",
+        "HIGHLAND WOODWORKING",
+        "PARKRECEIPTS.COM"
+    ],
+    "Vet": [
+        "RUSSELL RIDGE ANIMAL HOSP"
     ]
 }
