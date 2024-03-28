@@ -3,6 +3,55 @@
         "UBER EATS"
     ],
     "Fast Food": [
-        "WENDYS"
+        "WENDYS",
+        "POPEYES",
+        "COOK OUT",
+        "ZAXBY",
+        "MCDONALD'S"
+    ],
+    "Meal Kit": [
+        "HOME CHEF"
+    ],
+    "Streaming Subscriptions": [
+        "AUDIBLE",
+        "SPOTIFY",
+        "DISNEY MOBILE",
+        "NETFLIX"
+    ],
+    "Gas": [
+        "EXXONMOBIL",
+        "TEXACO",
+        "CHEVRON",
+        "CITGO",
+        "QT"
+    ],
+    "Tech Bill": [
+        "MSBILL.INFO",
+        "MICROSOFT",
+        "AMAZON WEB SERVICES"
+    ], 
+    "Grocery": [
+        "DOLLARSHAVECLUB",
+        "INSTACART"
+    ],
+    "Auto Maintenance": [
+        "ADVANCEAUTOPARTS",
+        "CALIBER COLLISION"
+    ],
+    "Utilities": [
+        "COWETA FAYETTE ELECTR",
+        "COMCAST CABLE COMM"
+    ],
+    "Phone": [
+        "XFINITY MOBILE"
+    ], 
+    "Shopping": [
+        "BUC-EE'S",
+        "AMZN.COM/BILL"
+    ],
+    "Restaurant": [
+        "PEACH VALLEY CAFE",
+        "TST* OLD FOURTH WARD",
+        "TST* DANCING GOATS COFFEE"
     ]
 }
