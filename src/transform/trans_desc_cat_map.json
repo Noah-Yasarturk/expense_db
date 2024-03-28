@@ -9,16 +9,20 @@
         "COOK OUT",
         "ZAXBY",
         "MCDONALD'S",
-        "CHICK-FIL-A"
+        "CHICK-FIL-A",
+        "DAIRY QUEEN",
+        "SMOOTHIE KING"
     ],
     "Meal Kit": [
         "HOME CHEF"
     ],
-    "Streaming Subscriptions": [
+    "Streaming Services": [
         "AUDIBLE",
         "SPOTIFY",
         "DISNEY MOBILE",
-        "NETFLIX"
+        "NETFLIX",
+        "YOUTUBE VIDEOS",
+        "CRUNCHYROLL"
     ],
     "Gas": [
         "EXXONMOBIL",
@@ -27,7 +31,9 @@
         "CITGO",
         "QT",
         "AMOCO",
-        "MAPCO"
+        "MAPCO",
+        "SHELL",
+        "CHIPOTLE"
     ],
     "Tech Bill": [
         "MSBILL.INFO",
@@ -37,12 +43,15 @@
     "Grocery": [
         "DOLLARSHAVECLUB",
         "INSTACART",
-        "PUBLIX"
+        "PUBLIX",
+        "WALGREENS",
+        "WAL-MART"
     ],
     "Auto Maintenance": [
         "ADVANCEAUTOPARTS",
         "CALIBER COLLISION", 
-        "PCA ATL 2"
+        "PCA ATL 2",
+        "DMV"
     ],
     "Utilities": [
         "COWETA FAYETTE ELECTR",
@@ -53,7 +62,11 @@
     ], 
     "Shopping": [
         "BUC-EE'S",
-        "AMZN.COM/BILL"
+        "AMZN.COM/BILL",
+        "ETSY.COM",
+        "DISPLATE",
+        "MACYS",
+        "VANS"
     ],
     "Coffee": [
         "TST* OLD FOURTH WARD",
@@ -61,7 +74,13 @@
         "STARBUCKS"
     ],
     "Restaurant": [
-        "PEACH VALLEY CAFE"
+        "PEACH VALLEY CAFE",
+        "THE PEACHTREE CAFE",
+        "FOX BROS BBQ",
+        "CARNICERIA",
+        "SWEET HUT",
+        "LEE`S BAKERY",
+        "BURGER/HOP'S"
     ],
     "Gaming": [
         "PLAYSTATION"
@@ -80,5 +99,31 @@
     ],
     "Shipping Service": [
         "FEDEX"
+    ],
+    "Flowers": [
+        "LEAF N PETAL"
+    ],
+    "Alcohol": 
+    [
+        "THREETAVERNSIMAGINARIUM",
+        "LADYBIRD",
+        "GREENS PACKAGE STORE",
+        "CITY WINERY"
+    ], 
+    "Nicotine": [
+        "INHALE SMOKE & VAPE"
+    ],
+    "Financial Services": [
+        "TURBOTAX",
+        "FRESHBOOKS"
+    ],
+    "Gifts": [
+        "LAWNSTARTER"
+    ],
+    "Furniture": [
+        "IKEA"
+    ],
+    "Concerts": [
+        "EB R.A.P.FERREIRA"
     ]
 }
