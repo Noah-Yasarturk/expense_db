@@ -13,7 +13,13 @@
         "CHICK-FIL-A",
         "DAIRY QUEEN",
         "SMOOTHIE KING",
-        "JIMMY JOHNS"
+        "JIMMY JOHNS",
+        "STEAK-N-SHAKE",
+        "EINSTEIN BAGELS",
+        "PANERA BREAD",
+        "TACO BELL",
+        "CHECKERS",
+        "KFC"
     ],
     "Meal Kit": [
         "HOME CHEF"
@@ -26,7 +32,8 @@
         "YOUTUBE VIDEOS",
         "CRUNCHYROLL",
         "DISNEYPLUS",
-        "HULU.COM"
+        "HULU.COM",
+        "GOOGLE *WM MAX"
     ],
     "Gas": [
         "EXXONMOBIL",
@@ -37,12 +44,17 @@
         "AMOCO",
         "MAPCO",
         "SHELL",
-        "CHIPOTLE"
+        "CHIPOTLE",
+        "BP",
+        "RACETRAC",
+        "MORELAND FOOD MART"
     ],
     "Tech Bill": [
         "MSBILL.INFO",
         "MICROSOFT",
-        "AMAZON WEB SERVICES"
+        "AMAZON WEB SERVICES",
+        "GOOGLE *GOOGLE PLAY G.CO/HELPPAY#",
+        "GOOGLE *DOMAINS"
     ], 
     "Grocery": [
         "DOLLARSHAVECLUB",
@@ -53,14 +65,19 @@
         "KROGER",
         "LOWES",
         "INGLES",
-        "WHOLEFDS"
+        "WHOLEFDS",
+        "SPROUTS FARMERS",
+        "H MART",
+        "CVS/PHARMACY",
+        "TARGET"
     ],
     "Auto Maintenance": [
         "ADVANCEAUTOPARTS",
         "CALIBER COLLISION", 
         "DMV",
         "GREASE MONKEY",
-        "ADVANCE AUTO PARTS"
+        "ADVANCE AUTO PARTS",
+        "CURRY HONDA"
     ],
     "Utilities": [
         "COWETA FAYETTE ELECTR",
@@ -79,13 +96,45 @@
         "BEST BUY",
         "BED BATH & BEYOND",
         "CHAMPS",
-        "VIRGINIA HIGHLAND BOOKS"
+        "VIRGINIA HIGHLAND BOOKS",
+        "GUITAR CENTER",
+        "LUSH LENOX SQUARE",
+        "MICHAELS STORES",
+        "FOREVER 21",
+        "POSMAN BOOKS",
+        "HOMEGOODS",
+        "MADEWELL",
+        "ANTHROPOLOGIE",
+        "THE PARIS FLEA MARKET",
+        "E SHAVER BOOKSTORE",
+        "SPENCER KOHL STUDIO",
+        "SP NINE LINE APPAREL",
+        "THE SALT TABLE",
+        "URBAN OUTFITTRS",
+        "FOLIO SOCIETY",
+        "APPLE STORE",
+        "J. CREW",
+        "BARNES & NOBLE",
+        "DAZZLEDRYNAILS.COM",
+        "AMERICAN EAGLE",
+        "GAP US"
     ],
     "Coffee": [
         "TST* OLD FOURTH WARD",
         "TST* DANCING GOATS COFFEE",
         "STARBUCKS",
-        "BOULDER CREEK COFFEE"
+        "BOULDER CREEK COFFEE",
+        "SQ *PERC",
+        "TST* TRADEWIND COFFEE",
+        "BANJO COFFEE",
+        "ST GERMAIN",
+        "JOE'S EAST ATLANTA CO",
+        "BELLWOOD COFFEE",
+        "WISHES COFFEE",
+        "SAVANNAHTEA SAVANNAH GA",
+        "THREE TREE COFFEE",
+        "WALLER?S COFFEE SHOP",
+        "KAVARNA"
     ],
     "Restaurant": [
         "PEACH VALLEY CAFE",
@@ -105,12 +154,64 @@
         "KURA REVOLVING SUSHI",
         "TJ'S SANDWICHES",
         "GWCC APPETIZE",
-        "JENI'S SPLENDID ICE",
         "BROOKLYN BAGELS",
         "GRINDHOUSE KILLER BURG",
         "SEASONS 52",
         "CLAYTON CAFE",
-        "CHILI'S"
+        "CHILI'S",
+        "ARGOSY",
+        "GRAND LUX CAFE", 
+        "VARUNI NAPOLI",
+        "TIN LIZZY'S",
+        "NINOS ITALIAN RESTAURA",
+        "BAR.BACOA",
+        "LITTLE CAESARS",
+        "CITY BARBEQUE",
+        "LETS GO EAT LAWRENCEVILL",
+        "HIGHLAND BAKERY",
+        "BATTLE & BREW",
+        "MISS GOGI",
+        "SQ *RECESS @KROG",
+        "SQ *BUN MI GRILL",
+        "ELMYR",
+        "FREDS MEAT",
+        "PAPIS MIDTOWN",
+        "TST* GUS DUMPLINGS",
+        "GEORGAAQUARIUM CAFE",
+        "MINERO",
+        "EMERALD CITY BAGELS",
+        "OLE CUBAN KITCHEN",
+        "UNIVERSAL JOINT",
+        "VELVET TACO",
+        "TST* GREENE TURTLE - PAPI",
+        "A MANO",
+        "TST* HUDSON GRILLE",
+        "TAFFERS TAVERN",
+        "WAFFLE HOUSE",
+        "THE ORDINARY PUB",
+        "DUBS PUB",
+        "GOOSE FEATHERS CAFE",
+        "THE PUBLIC KITCHEN & BAR",
+        "THE OLDE PINK HSE",
+        "DADDY OBRIENS",
+        "MARLOWS",
+        "MAGGIANOS BUCKHEAD",
+        "TST* GRINDHOUSE - DECATUR",
+        "TAQUERIA",
+        "SHAKE SHACK"
+    ],
+    "Dessert Shop": [
+        "LITTLE TART BAKESHOP",
+        "JENI'S SPLENDID ICE",
+        "JENI S SPLENDID ICE",
+        "LE MACARON NORTH POINT",
+        "SOUTHERN BAKED PIE",
+        "SODA POP SHOPPE",
+        "SQ *CHOCOLAT BY ADAM"
+    ],
+    "Food Truck": [
+        "JALAPENO CORNDOG CONCESSI",
+        "SQ *LOW-CO MOTION"
     ],
     "Gaming": [
         "PLAYSTATION"
@@ -127,14 +228,16 @@
     "Rideshare": [
         "UBER TRIP",
         "UBER *PASS",
-        "UBER PASS"
+        "UBER PASS",
+        "UBER* TRIP"
     ],
     "Shipping Service": [
         "FEDEX",
         "USPS"
     ],
     "Flowers": [
-        "LEAF N PETAL"
+        "LEAF N PETAL",
+        "FROMYOUFLOWERS"
     ],
     "Alcohol": 
     [
@@ -151,7 +254,15 @@
         "GEORGIA BEER GARDEN",
         "LITTLE TROUBLE",
         "BOOKHOUSE PUB",
-        "BANTAM PUB"
+        "BANTAM PUB",
+        "IRONSHIELD",
+        "SLOW POUR",
+        "STILLFIRE BREWING",
+        "MEGA PACKAGE STORE",
+        "SQ *BAR POLITAN",
+        "LULUS CHOCOLATE BAR",
+        "ROYAL PACKAGE",
+        "THREE TAVERNS CRAFT BEERS"
     ], 
     "Nicotine": [
         "INHALE SMOKE & VAPE"
@@ -167,7 +278,11 @@
         "IKEA"
     ],
     "Concerts": [
-        "EB R.A.P.FERREIRA"
+        "EB R.A.P.FERREIRA",
+        "ALLIANZ EVENT INS",
+        "TM *GORILLAZ",
+        "ALLSTATE *PAYMENT",
+        "AMERIS BANK AMPHITHEA"
     ],
     "Dating App": [
         "BUMBLE"
@@ -180,9 +295,46 @@
         "NATIONAL PARKING",
         "LAZ PARKING",
         "HIGHLAND WOODWORKING",
-        "PARKRECEIPTS.COM"
+        "PARKRECEIPTS.COM",
+        "WOMENS CENTER PARKING",
+        "ABM ATLANTA ARPRT",
+        "PROPERTIES SAV INC HOPEWELL JUNC NY",
+        "INTERLOCKGARAGEPARKMOB"
     ],
     "Vet": [
         "RUSSELL RIDGE ANIMAL HOSP"
+    ],
+    "Movies": [
+        "AMC",
+        "FANDANGO",
+        "PLAZA THEATRE",
+        "REGAL MALL OF GA"
+    ],
+    "Event Tickets": [
+        "BTKLOOK UP ATLANTA JU BIGTICKETS",
+        "GEORGIA AQUARIUM",
+        "ATLANTA BOTANICAL GAR",
+        "TICKETSATLANTA"
+    ],
+    "Bowling": [
+        "BOWLMOR"
+    ],
+    "Renters Insurance": [
+        "ERENTERPLAN.COM"
+    ],
+    "Hotel": [
+        "IRIS GARDEN INN",
+        "MICROTEL INN"
+    ],
+    "Museum": [
+        "TELFAIRMUSEUMS",
+        "OWENS THOMAS MUSEUM"
+    ],
+    "Golf": 
+    [
+        "PUTTSHACK"
+    ],
+    "Charity": [
+        "SAMARITANS PURS"
     ]
 }
