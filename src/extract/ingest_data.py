@@ -157,4 +157,4 @@ if __name__ == "__main__":
     pdf_data_concat_df = pd.concat(pdf_data)
     # For now, just output as a csv 
     logger.info(f"Outputting all transactions as csv at {ALL_TRANSACTIONS_OUTPUT_PATH}")
-    pdf_data_concat_df.to_csv(ALL_TRANSACTIONS_OUTPUT_PATH)
+    pdf_data_concat_df.to_csv(ALL_TRANSACTIONS_OUTPUT_PATH, index=False)

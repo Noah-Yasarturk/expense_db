@@ -19,7 +19,9 @@
         "PANERA BREAD",
         "TACO BELL",
         "CHECKERS",
-        "KFC"
+        "KFC",
+        "WENDY'S"
+        
     ],
     "Meal Kit": [
         "HOME CHEF"
@@ -69,7 +71,8 @@
         "SPROUTS FARMERS",
         "H MART",
         "CVS/PHARMACY",
-        "TARGET"
+        "TARGET",
+        "TRADER JOE'S"
     ],
     "Auto Maintenance": [
         "ADVANCEAUTOPARTS",
@@ -134,7 +137,8 @@
         "SAVANNAHTEA SAVANNAH GA",
         "THREE TREE COFFEE",
         "WALLER?S COFFEE SHOP",
-        "KAVARNA"
+        "KAVARNA",
+        "THE CORNER CUP"
     ],
     "Restaurant": [
         "PEACH VALLEY CAFE",
@@ -198,7 +202,11 @@
         "MAGGIANOS BUCKHEAD",
         "TST* GRINDHOUSE - DECATUR",
         "TAQUERIA",
-        "SHAKE SHACK"
+        "SHAKE SHACK",
+        "MIDCITY CAFE",
+        "PAPI'S - MIDTOWN",
+        "THE BRICK STORE PUB",
+        "THE CORNER TAVERN"
     ],
     "Dessert Shop": [
         "LITTLE TART BAKESHOP",
@@ -233,7 +241,9 @@
     ],
     "Shipping Service": [
         "FEDEX",
-        "USPS"
+        "USPS",
+        "UPS STORE",
+        "COLLEGE HUNKS"
     ],
     "Flowers": [
         "LEAF N PETAL",
@@ -262,7 +272,8 @@
         "SQ *BAR POLITAN",
         "LULUS CHOCOLATE BAR",
         "ROYAL PACKAGE",
-        "THREE TAVERNS CRAFT BEERS"
+        "THREE TAVERNS CRAFT BEERS",
+        "DACULA CORK & BOTTLES"
     ], 
     "Nicotine": [
         "INHALE SMOKE & VAPE"
@@ -299,7 +310,9 @@
         "WOMENS CENTER PARKING",
         "ABM ATLANTA ARPRT",
         "PROPERTIES SAV INC HOPEWELL JUNC NY",
-        "INTERLOCKGARAGEPARKMOB"
+        "INTERLOCKGARAGEPARKMOB",
+        "PARKPLACE",
+        "LANIER PARKING"
     ],
     "Vet": [
         "RUSSELL RIDGE ANIMAL HOSP"
@@ -336,5 +349,6 @@
     ],
     "Charity": [
         "SAMARITANS PURS"
-    ]
+    ],
+    "Jewelry": "GUVENS FINE JEWELRY"
 }
