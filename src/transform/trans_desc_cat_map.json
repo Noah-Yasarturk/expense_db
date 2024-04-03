@@ -1,0 +1,354 @@
+{
+    "Food Delivery": [
+        "UBER EATS",
+        "UBER* EATS",
+        "DOORDASH"
+    ],
+    "Fast Food": [
+        "WENDYS",
+        "POPEYES",
+        "COOK OUT",
+        "ZAXBY",
+        "MCDONALD'S",
+        "CHICK-FIL-A",
+        "DAIRY QUEEN",
+        "SMOOTHIE KING",
+        "JIMMY JOHNS",
+        "STEAK-N-SHAKE",
+        "EINSTEIN BAGELS",
+        "PANERA BREAD",
+        "TACO BELL",
+        "CHECKERS",
+        "KFC",
+        "WENDY'S"
+        
+    ],
+    "Meal Kit": [
+        "HOME CHEF"
+    ],
+    "Streaming Services": [
+        "AUDIBLE",
+        "SPOTIFY",
+        "DISNEY MOBILE",
+        "NETFLIX",
+        "YOUTUBE VIDEOS",
+        "CRUNCHYROLL",
+        "DISNEYPLUS",
+        "HULU.COM",
+        "GOOGLE *WM MAX"
+    ],
+    "Gas": [
+        "EXXONMOBIL",
+        "TEXACO",
+        "CHEVRON",
+        "CITGO",
+        "QT",
+        "AMOCO",
+        "MAPCO",
+        "SHELL",
+        "CHIPOTLE",
+        "BP",
+        "RACETRAC",
+        "MORELAND FOOD MART"
+    ],
+    "Tech Bill": [
+        "MSBILL.INFO",
+        "MICROSOFT",
+        "AMAZON WEB SERVICES",
+        "GOOGLE *GOOGLE PLAY G.CO/HELPPAY#",
+        "GOOGLE *DOMAINS"
+    ], 
+    "Grocery": [
+        "DOLLARSHAVECLUB",
+        "INSTACART",
+        "PUBLIX",
+        "WALGREENS",
+        "WAL-MART",
+        "KROGER",
+        "LOWES",
+        "INGLES",
+        "WHOLEFDS",
+        "SPROUTS FARMERS",
+        "H MART",
+        "CVS/PHARMACY",
+        "TARGET",
+        "TRADER JOE'S"
+    ],
+    "Auto Maintenance": [
+        "ADVANCEAUTOPARTS",
+        "CALIBER COLLISION", 
+        "DMV",
+        "GREASE MONKEY",
+        "ADVANCE AUTO PARTS",
+        "CURRY HONDA"
+    ],
+    "Utilities": [
+        "COWETA FAYETTE ELECTR",
+        "COMCAST CABLE COMM"
+    ],
+    "Phone": [
+        "XFINITY MOBILE"
+    ], 
+    "Shopping": [
+        "BUC-EE'S",
+        "AMZN.COM/BILL",
+        "ETSY.COM",
+        "DISPLATE",
+        "MACYS",
+        "VANS",
+        "BEST BUY",
+        "BED BATH & BEYOND",
+        "CHAMPS",
+        "VIRGINIA HIGHLAND BOOKS",
+        "GUITAR CENTER",
+        "LUSH LENOX SQUARE",
+        "MICHAELS STORES",
+        "FOREVER 21",
+        "POSMAN BOOKS",
+        "HOMEGOODS",
+        "MADEWELL",
+        "ANTHROPOLOGIE",
+        "THE PARIS FLEA MARKET",
+        "E SHAVER BOOKSTORE",
+        "SPENCER KOHL STUDIO",
+        "SP NINE LINE APPAREL",
+        "THE SALT TABLE",
+        "URBAN OUTFITTRS",
+        "FOLIO SOCIETY",
+        "APPLE STORE",
+        "J. CREW",
+        "BARNES & NOBLE",
+        "DAZZLEDRYNAILS.COM",
+        "AMERICAN EAGLE",
+        "GAP US"
+    ],
+    "Coffee": [
+        "TST* OLD FOURTH WARD",
+        "TST* DANCING GOATS COFFEE",
+        "STARBUCKS",
+        "BOULDER CREEK COFFEE",
+        "SQ *PERC",
+        "TST* TRADEWIND COFFEE",
+        "BANJO COFFEE",
+        "ST GERMAIN",
+        "JOE'S EAST ATLANTA CO",
+        "BELLWOOD COFFEE",
+        "WISHES COFFEE",
+        "SAVANNAHTEA SAVANNAH GA",
+        "THREE TREE COFFEE",
+        "WALLER?S COFFEE SHOP",
+        "KAVARNA",
+        "THE CORNER CUP"
+    ],
+    "Restaurant": [
+        "PEACH VALLEY CAFE",
+        "THE PEACHTREE CAFE",
+        "FOX BROS BBQ",
+        "CARNICERIA",
+        "SWEET HUT",
+        "LEE`S BAKERY",
+        "BURGER/HOP'S",
+        "GENERAL MUIR",
+        "HATTIE B'S",
+        "EL SUPER PAN",
+        "TACO MAC",
+        "VICTORY SANDWICH BAR",
+        "VARSITY NORTH AVENUE",
+        "26 THAI",
+        "KURA REVOLVING SUSHI",
+        "TJ'S SANDWICHES",
+        "GWCC APPETIZE",
+        "BROOKLYN BAGELS",
+        "GRINDHOUSE KILLER BURG",
+        "SEASONS 52",
+        "CLAYTON CAFE",
+        "CHILI'S",
+        "ARGOSY",
+        "GRAND LUX CAFE", 
+        "VARUNI NAPOLI",
+        "TIN LIZZY'S",
+        "NINOS ITALIAN RESTAURA",
+        "BAR.BACOA",
+        "LITTLE CAESARS",
+        "CITY BARBEQUE",
+        "LETS GO EAT LAWRENCEVILL",
+        "HIGHLAND BAKERY",
+        "BATTLE & BREW",
+        "MISS GOGI",
+        "SQ *RECESS @KROG",
+        "SQ *BUN MI GRILL",
+        "ELMYR",
+        "FREDS MEAT",
+        "PAPIS MIDTOWN",
+        "TST* GUS DUMPLINGS",
+        "GEORGAAQUARIUM CAFE",
+        "MINERO",
+        "EMERALD CITY BAGELS",
+        "OLE CUBAN KITCHEN",
+        "UNIVERSAL JOINT",
+        "VELVET TACO",
+        "TST* GREENE TURTLE - PAPI",
+        "A MANO",
+        "TST* HUDSON GRILLE",
+        "TAFFERS TAVERN",
+        "WAFFLE HOUSE",
+        "THE ORDINARY PUB",
+        "DUBS PUB",
+        "GOOSE FEATHERS CAFE",
+        "THE PUBLIC KITCHEN & BAR",
+        "THE OLDE PINK HSE",
+        "DADDY OBRIENS",
+        "MARLOWS",
+        "MAGGIANOS BUCKHEAD",
+        "TST* GRINDHOUSE - DECATUR",
+        "TAQUERIA",
+        "SHAKE SHACK",
+        "MIDCITY CAFE",
+        "PAPI'S - MIDTOWN",
+        "THE BRICK STORE PUB",
+        "THE CORNER TAVERN"
+    ],
+    "Dessert Shop": [
+        "LITTLE TART BAKESHOP",
+        "JENI'S SPLENDID ICE",
+        "JENI S SPLENDID ICE",
+        "LE MACARON NORTH POINT",
+        "SOUTHERN BAKED PIE",
+        "SODA POP SHOPPE",
+        "SQ *CHOCOLAT BY ADAM"
+    ],
+    "Food Truck": [
+        "JALAPENO CORNDOG CONCESSI",
+        "SQ *LOW-CO MOTION"
+    ],
+    "Gaming": [
+        "PLAYSTATION"
+    ],
+    "Car Insurance": [
+        "GEICO"
+    ],
+    "Haircut": [
+        "INMAN PARLOR"
+    ],
+    "Rent": [
+        "THE PRATO AT MI"
+    ],
+    "Rideshare": [
+        "UBER TRIP",
+        "UBER *PASS",
+        "UBER PASS",
+        "UBER* TRIP"
+    ],
+    "Shipping Service": [
+        "FEDEX",
+        "USPS",
+        "UPS STORE",
+        "COLLEGE HUNKS"
+    ],
+    "Flowers": [
+        "LEAF N PETAL",
+        "FROMYOUFLOWERS"
+    ],
+    "Alcohol": 
+    [
+        "THREETAVERNSIMAGINARIUM",
+        "LADYBIRD",
+        "GREENS PACKAGE STORE",
+        "CITY WINERY",
+        "JOYSTICK GAMEBAR",
+        "SISTER LOUISA",
+        "DUNGEONS & DAIQUIRIS",
+        "C&P STOP & SHOP",
+        "ORPHEUS BREWING",
+        "REVERY - VR BAR",
+        "GEORGIA BEER GARDEN",
+        "LITTLE TROUBLE",
+        "BOOKHOUSE PUB",
+        "BANTAM PUB",
+        "IRONSHIELD",
+        "SLOW POUR",
+        "STILLFIRE BREWING",
+        "MEGA PACKAGE STORE",
+        "SQ *BAR POLITAN",
+        "LULUS CHOCOLATE BAR",
+        "ROYAL PACKAGE",
+        "THREE TAVERNS CRAFT BEERS",
+        "DACULA CORK & BOTTLES"
+    ], 
+    "Nicotine": [
+        "INHALE SMOKE & VAPE"
+    ],
+    "Financial Services": [
+        "TURBOTAX",
+        "FRESHBOOKS"
+    ],
+    "Lawn Service": [
+        "LAWNSTARTER"
+    ],
+    "Furniture": [
+        "IKEA"
+    ],
+    "Concerts": [
+        "EB R.A.P.FERREIRA",
+        "ALLIANZ EVENT INS",
+        "TM *GORILLAZ",
+        "ALLSTATE *PAYMENT",
+        "AMERIS BANK AMPHITHEA"
+    ],
+    "Dating App": [
+        "BUMBLE"
+    ],
+    "Parking": [
+        "EXECUTIVE PARKING",
+        "PARKINGCOM",
+        "PCA ATL 2",
+        "PCA ATL 3A",
+        "NATIONAL PARKING",
+        "LAZ PARKING",
+        "HIGHLAND WOODWORKING",
+        "PARKRECEIPTS.COM",
+        "WOMENS CENTER PARKING",
+        "ABM ATLANTA ARPRT",
+        "PROPERTIES SAV INC HOPEWELL JUNC NY",
+        "INTERLOCKGARAGEPARKMOB",
+        "PARKPLACE",
+        "LANIER PARKING"
+    ],
+    "Vet": [
+        "RUSSELL RIDGE ANIMAL HOSP"
+    ],
+    "Movies": [
+        "AMC",
+        "FANDANGO",
+        "PLAZA THEATRE",
+        "REGAL MALL OF GA"
+    ],
+    "Event Tickets": [
+        "BTKLOOK UP ATLANTA JU BIGTICKETS",
+        "GEORGIA AQUARIUM",
+        "ATLANTA BOTANICAL GAR",
+        "TICKETSATLANTA"
+    ],
+    "Bowling": [
+        "BOWLMOR"
+    ],
+    "Renters Insurance": [
+        "ERENTERPLAN.COM"
+    ],
+    "Hotel": [
+        "IRIS GARDEN INN",
+        "MICROTEL INN"
+    ],
+    "Museum": [
+        "TELFAIRMUSEUMS",
+        "OWENS THOMAS MUSEUM"
+    ],
+    "Golf": 
+    [
+        "PUTTSHACK"
+    ],
+    "Charity": [
+        "SAMARITANS PURS"
+    ],
+    "Jewelry": "GUVENS FINE JEWELRY"
+}
